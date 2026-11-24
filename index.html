@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Porqué de Todo Uploader</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
+  header { display: flex; gap: 20px; align-items: center; } header img { width: 110px; height: 110px; border-radius: 50%; }
+  h1 { color: #ff6a1a; margin: 0; } footer { margin-top: 3em; border-top: 1px solid #eee; padding-top: 1em; color: #666; }
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="El Porqué de Todo logo">
+  <div><h1>El Porqué de Todo Uploader</h1><p>Private upload tool for the YouTube channel <strong>El Porqué de Todo</strong>.</p></div>
+</header>
+
+<h2>What it is</h2>
+<p><strong>El Porqué de Todo</strong> is a Spanish-language channel of short animated videos that explain everyday curiosities for a family audience
+(science, animals, the human body, space, technology). Every video is original: script, cartoon animation, narration and music are made for the channel.</p>
+<p>This App is a desktop tool used <strong>only by the channel owner</strong> on their own computer. Once a video is finished, the App uploads it to the
+owner's own YouTube channel using the YouTube Data API (<code>videos.insert</code>), with its title, description, tags, category and publish time,
+so the channel can publish on a regular schedule (three short videos a day).</p>
+
+<h2>How it uses Google data</h2>
+<ul>
+  <li>Requests a single OAuth scope, <code>https://www.googleapis.com/auth/youtube.upload</code>, from the channel owner.</li>
+  <li>Uploads only the owner's own original videos to the owner's own channel. It never accesses other users' accounts.</li>
+  <li>Reads the public "most popular" chart for Spain with an API key, to find topic ideas.</li>
+  <li>Stores tokens only on the owner's computer. No server, no database, no sharing with third parties.</li>
+</ul>
+
+<p>Read the full <a href="privacidad.html">Privacy Policy</a>. This App uses YouTube API Services:
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> · <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<footer>Contact: <a href="mailto:rayanyvideos@gmail.com">rayanyvideos@gmail.com</a></footer>
+</body>
+</html>
